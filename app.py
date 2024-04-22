@@ -16,4 +16,12 @@ age = st.slider('Select your age', 0, 100, 25)
 # Show the selected age
 st.write('Your selected age:', age)
 
+image = st.camera()
+
+# Display captured image
+if image is not None:
+    st.image(image, caption='Captured Image')
+else:
+    st.write('No image captured')
+
 
