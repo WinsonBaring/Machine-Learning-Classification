@@ -15,13 +15,6 @@ age = st.slider('Select your age', 0, 100, 25)
 
 # Show the selected age
 st.write('Your selected age:', age)
-
-image = st.camera()
-
-# Display captured image
-if image is not None:
-    st.image(image, caption='Captured Image')
-else:
-    st.write('No image captured')
-
-
+label = 'winsson'
+st.camera_input(label, key=None, help=None, on_change=None, args=None, disabled=True, label_visibility="visible")
+st.button("Testing", key=None, help=None, on_click=None, args=None, kwargs=None, type="secondary", disabled=False, use_container_width=False)
