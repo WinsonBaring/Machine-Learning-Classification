@@ -1,2 +1,8 @@
 streamlit
 opencv-python-headless 
+keras
+tensorflow
+matplotlib
+numpy
+streamlit-camera-input-live
+opencv-python
