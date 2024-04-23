@@ -16,16 +16,16 @@ import os
 st.title('Black and Yellow Classification')
 
 tiger_label = [0, 0, 1]
-tiger_images_validation, tiger_labels_validation = load_images_and_labels('data/tiger_validation_resized',tiger_label)
+# tiger_images_validation, tiger_labels_validation = load_images_and_labels('data/tiger_validation_resized',tiger_label)
 
 
 # Load the Keras model
-model = load_model('./models/classification_model.h5')
+model = load_model('classification_model.h5')
 model.compile(optimizer='adam',
               loss='binary_crossentropy',  # Binary cross-entropy loss for multi-label classification
               metrics=['accuracy'],
               )
-loss,accuracy = model.evaluate(tiger_images_validation,tiger_labels_validation)
+# loss,accuracy = model.evaluate(tiger_images_validation,tiger_labels_validation)
 
 def process_image(image_array):
     # Convert the image buffer to a numpy array
@@ -41,7 +41,7 @@ def main():
     st.title("Live Camera Classification")
 
     # Display the camera input
-    img_file_buffer = camera_input_live()
+    img_file_buffer = camera_input_live(debounce=500)
     
     # img_file_buffer = st.camera_input("Take a picture")
 

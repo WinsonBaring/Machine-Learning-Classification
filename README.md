@@ -1,30 +1,24 @@
 # Machine Learning Classification
- Machine Learning Classification
 
-# Classification Model
-classification_model.h5
+## Overview
+This repository contains code for a machine learning classification model. The model is trained to classify images into different categories using deep learning techniques.
 
+## Classification Model
+### Model File
+- **classification_model.h5**: This file contains the trained classification model.
+  - You can load this model using `model.load_model("classification_model.h5")`.
 
-# things to note when loading a model
+### Notes on Model Loading
+- **Model Compilation**: After loading the model, you can compile it with different configurations such as weights and activations.
+- **Model Training**: You can further train the loaded model and apply additional callbacks as needed.
 
-model.load_model("classification_model.h5")
+## Training the Model
+### Steps
+1. **Download Dataset**: Download the dataset from the provided link: [Dataset Link](https://drive.google.com/drive/folders/1nLwmRSAGseFITBUGG83JikS4k5hOMb_4?usp=drive_link).
+2. **Data Directory**: Create a data directory inside the `src` folder.
+3. **Place Dataset**: Place the downloaded dataset in the data directory.
 
-*model.compile()
-we can compile the model with different weights and activations than the previous weights and activation it was trained with
+## Additional Resources
+- **Website Link**:[ Access additional resources related to the project.](https://machine-learning-classification.streamlit.app/)
 
-* model.fit()
-we can train the model and use other callbacks to the model 
-
-
-
-
-# Training The Model
-
-* download: https://drive.google.com/drive/folders/1nLwmRSAGseFITBUGG83JikS4k5hOMb_4?usp=drive_link 
-
-create data directory in src
-
-place the dataset in the data directory 
-
-
-
+Feel free to explore and contribute to this project!
