@@ -20,7 +20,7 @@ tiger_images_validation, tiger_labels_validation = load_images_and_labels('data/
 
 
 # Load the Keras model
-model = load_model('classification_model.h5')
+model = load_model('./models/classification_model.h5')
 model.compile(optimizer='adam',
               loss='binary_crossentropy',  # Binary cross-entropy loss for multi-label classification
               metrics=['accuracy'],
