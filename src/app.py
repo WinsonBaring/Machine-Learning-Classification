@@ -51,8 +51,9 @@ tiger_label = [0, 0, 1]
 
 st.markdown("<h1 style='text-align: center;'>The Identity Your Animal</h1>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
-
+st.title("testing")
 # st.image('./data/bg.png', use_column_width=True)
+
 # tiger_label = [0, 0, 1]
 # # tiger_images_validation, tiger_labels_validation = load_images_and_labels('data/tiger_validation_resized',tiger_label)
 

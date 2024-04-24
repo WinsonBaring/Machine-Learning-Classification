@@ -1,0 +1,16 @@
+[general]
+email = "winsonabaring10@gmail.com"
+
+[theme]
+primaryColor = "#FF5733"
+backgroundColor = "#F2F2F2"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#333333"
+font = "sans serif"
+
+[server]
+port = 8501
+
+[runner]
+command = "streamlit run src/app.py"
+requirementsFile = "requirements.txt"
