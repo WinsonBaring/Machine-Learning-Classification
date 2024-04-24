@@ -70,8 +70,13 @@ uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "pn
 
 
 # Load the Keras model
+# Deserialize a Python object
+model = "model"
+with open('model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
-model=pickle.load(open('model.pkl','rb'))
+st.write("this is model",model)
+# model=pickle.load(open('model.pkl','rb'))
 # model = load_model('classification_model.h5')
 model.compile(optimizer='adam',
               loss='binary_crossentropy',  # Binary cross-entropy loss for multi-label classification
