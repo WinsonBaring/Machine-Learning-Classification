@@ -19,61 +19,61 @@ import os
 st.markdown("<h1 style='text-align: center;'>The Identity Your Animal</h1>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
 
-st.image('./data/bg.png', use_column_width=True)
-tiger_label = [0, 0, 1]
-# tiger_images_validation, tiger_labels_validation = load_images_and_labels('data/tiger_validation_resized',tiger_label)
+# st.image('./data/bg.png', use_column_width=True)
+# tiger_label = [0, 0, 1]
+# # tiger_images_validation, tiger_labels_validation = load_images_and_labels('data/tiger_validation_resized',tiger_label)
 
 
 
-# loss,accuracy = model.evaluate(tiger_images_validation,tiger_labels_validation)
+# # loss,accuracy = model.evaluate(tiger_images_validation,tiger_labels_validation)
 
-# Title for the app
-st.markdown("<h1 style='text-align: center;'>Instruction</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>Upload an image of either Lion, Tiger, Hyeena, Cheetah and the app will identify the result</p>", unsafe_allow_html=True)
-st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
-st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
+# # Title for the app
+# st.markdown("<h1 style='text-align: center;'>Instruction</h1>", unsafe_allow_html=True)
+# st.markdown("<p style='text-align: center;'>Upload an image of either Lion, Tiger, Hyeena, Cheetah and the app will identify the result</p>", unsafe_allow_html=True)
+# st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
+# st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
 
-# Image uploader
-uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+# # Image uploader
+# uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 
-# Load the Keras model
-model = load_model('classification_model.h5')
-model.compile(optimizer='adam',
-              loss='binary_crossentropy',  # Binary cross-entropy loss for multi-label classification
-              metrics=['accuracy'],
-              )
-# Function to make prediction
-def predict(image):
-    # Resize image to match model input shape
-    image = image.resize((100, 100))
-    # Convert image to numpy array
-    image_array = np.array(image)
-    # Normalize pixel values
-    image_array = image_array / 255.0
-    # Add batch dimension
-    image_array = np.expand_dims(image_array, axis=0)
-    # Perform prediction using the model
-    prediction = model.predict(image_array)
-    accuracy = .7
-    st.write('Prediction1:',prediction)
-    st.write('Prediction2:',prediction[[[0]]])
-    st.write('Prediction2:',prediction[[[[0]]]])
-    st.write('Prediction3:',prediction[[[[[0]]]]] )
+# # Load the Keras model
+# model = load_model('classification_model.h5')
+# model.compile(optimizer='adam',
+#               loss='binary_crossentropy',  # Binary cross-entropy loss for multi-label classification
+#               metrics=['accuracy'],
+#               )
+# # Function to make prediction
+# def predict(image):
+#     # Resize image to match model input shape
+#     image = image.resize((100, 100))
+#     # Convert image to numpy array
+#     image_array = np.array(image)
+#     # Normalize pixel values
+#     image_array = image_array / 255.0
+#     # Add batch dimension
+#     image_array = np.expand_dims(image_array, axis=0)
+#     # Perform prediction using the model
+#     prediction = model.predict(image_array)
+#     accuracy = .7
+#     st.write('Prediction1:',prediction)
+#     st.write('Prediction2:',prediction[[[0]]])
+#     st.write('Prediction2:',prediction[[[[0]]]])
+#     st.write('Prediction3:',prediction[[[[[0]]]]] )
     
 
 
 
-# Display the uploaded image
-if uploaded_image is not None:
-    image = Image.open(uploaded_image)
-    st.image(image, caption='Uploaded Image', use_column_width=True)
+# # Display the uploaded image
+# if uploaded_image is not None:
+#     image = Image.open(uploaded_image)
+#     st.image(image, caption='Uploaded Image', use_column_width=True)
     
-    # Button to trigger prediction
-    if st.button('Predict'):
-        predict(image)
-else:
-    st.write('No image uploaded yet.')
+#     # Button to trigger prediction
+#     if st.button('Predict'):
+#         predict(image)
+# else:
+#     st.write('No image uploaded yet.')
 
 # def process_image(image_array):
 #     # Convert the image buffer to a numpy array
