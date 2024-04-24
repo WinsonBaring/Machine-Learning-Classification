@@ -48,4 +48,7 @@ if uploaded_file is not None:
         # Display predictions
         st.subheader("Predictions:")
         for i, (imagenet_id, label, score) in enumerate(predictions):
-            st.write(f"{i + 1}: {label} ({score:.2f})")
+            score_percentage = score * 100
+            st.write(f"{i + 1}: {label} ({score_percentage:.2f}%)")
+        # for i, (imagenet_id, label, score) in enumerate(predictions):
+        #     st.write(f"{i + 1}: {label} ({score:.2f})")
