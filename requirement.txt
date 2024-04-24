@@ -6,3 +6,4 @@ matplotlib
 numpy
 streamlit-camera-input-live
 opencv-python
+pyautogui
