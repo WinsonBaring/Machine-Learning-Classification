@@ -11,7 +11,6 @@ from PIL import Image
 
 
 import os
-import cv2
 import numpy as np
 # def load_images_and_labels(data_dir,label):
 #     images = []
