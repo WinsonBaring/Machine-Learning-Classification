@@ -68,12 +68,12 @@ st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
 uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 
-# # Load the Keras model
-# model = load_model('classification_model.h5')
-# model.compile(optimizer='adam',
-#               loss='binary_crossentropy',  # Binary cross-entropy loss for multi-label classification
-#               metrics=['accuracy'],
-#               )
+# Load the Keras model
+model = load_model('classification_model.h5')
+model.compile(optimizer='adam',
+              loss='binary_crossentropy',  # Binary cross-entropy loss for multi-label classification
+              metrics=['accuracy'],
+              )
 # # Function to make prediction
 # def predict(image):
 #     # Resize image to match model input shape
