@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import streamlit as st
 from PIL import Image
+import pickle
 
 
 import os
@@ -69,7 +70,9 @@ uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "pn
 
 
 # Load the Keras model
-model = load_model('classification_model.h5')
+
+model=pickle.load(open('model.pkl','rb'))
+# model = load_model('classification_model.h5')
 model.compile(optimizer='adam',
               loss='binary_crossentropy',  # Binary cross-entropy loss for multi-label classification
               metrics=['accuracy'],
