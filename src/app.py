@@ -8,7 +8,7 @@ from tensorflow.keras.applications.resnet50 import preprocess_input, decode_pred
 
 st.markdown("<h1 style='text-align: center;'>The Identity Everything</h1>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
-st.image('https://github.com/WinsonBaring/Machine-Learning-Classification/blob/main/bg.png?raw=true', use_column_width=True)
+st.image('https://github.com/WinsonBaring/Machine-Learning-Classification/blob/main/src/bg.png?raw=true', use_column_width=True)
 
 # Load pre-trained ResNet50 model
 model = ResNet50(weights='imagenet')
