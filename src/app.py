@@ -7,7 +7,7 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from camera_input_live import camera_input_live
 import matplotlib.pyplot as plt
 import numpy as np
-import cv2
+# import cv2
 
 import streamlit as st
 from PIL import Image
@@ -57,9 +57,9 @@ def predict(image):
     prediction = model.predict(image_array)
     accuracy = .7
     st.write('Prediction1:',prediction)
-    # st.write('Prediction2:',prediction[[[0]]])
-    # st.write('Prediction2:',prediction[[[[0]]]])
-    # st.write('Prediction3:',prediction[[[[[0]]]]] )
+    st.write('Prediction2:',prediction[[[0]]])
+    st.write('Prediction2:',prediction[[[[0]]]])
+    st.write('Prediction3:',prediction[[[[[0]]]]] )
     
 
 
