@@ -5,6 +5,11 @@ from tensorflow.keras.applications import ResNet50
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
 
+
+st.markdown("<h1 style='text-align: center;'>The Identity Everything</h1>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
+st.image('https://github.com/WinsonBaring/Machine-Learning-Classification/blob/main/bg.png?raw=true', use_column_width=True)
+
 # Load pre-trained ResNet50 model
 model = ResNet50(weights='imagenet')
 
@@ -24,7 +29,6 @@ def predict_image(img):
     return decoded_preds
 
 # Streamlit UI
-st.title("ResNet50 Image Classifier")
 
 # File uploader
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
