@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
 
 
-st.markdown("<h1 style='text-align: center;'>The Identity Everything</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>The Identitys Everything</h1>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
 st.image('https://github.com/WinsonBaring/Machine-Learning-Classification/blob/main/src/bg.png?raw=true', use_column_width=True)
 
