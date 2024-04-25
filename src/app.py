@@ -10,7 +10,7 @@ st.markdown("<h1 style='text-align: center;'>Jungle Guardians</h1>", unsafe_allo
 st.markdown("<br>", unsafe_allow_html=True) 
 st.image('https://github.com/WinsonBaring/Machine-Learning-Classification/blob/main/src/bg.png?raw=true', use_column_width=True)
 st.markdown("<br>", unsafe_allow_html=True)  
-st.markdown("<p style='text-align: center;'>Easily identify big cats with our WildCat Classifier! Quickly spot Cheetahs, Hyenas, Tigers, and Jaguars with accuracy. Designed for nature enthusiasts and conservationists, it's your go-to tool for wildlife exploration. Experience the jungle like never before!</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Our WildCat Classifier is the perfect tool for nature enthusiasts and conservationists who want to experience the thrill of the jungle in a whole new way! Quickly identify a wide range of big cats with pinpoint accuracy, including Cheetahs, Hyenas, Tigers, Jaguars, and many more! Whether you're a wildlife photographer or simply an animal lover, our WildCat Classifier is a must-have for your next adventure. Don't miss out on the opportunity to explore the jungle like never before!</p>", unsafe_allow_html=True)
 
 # Load pre-trained ResNet50 model
 model = ResNet50(weights='imagenet')
