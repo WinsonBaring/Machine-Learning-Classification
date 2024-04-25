@@ -33,9 +33,27 @@ def predict_image(img):
 # File uploader
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
+
 if uploaded_file is not None:
     # Display the uploaded image
     img = Image.open(uploaded_file)
+    st.image(img, caption='Uploaded Image', use_column_width=True)
+
+    # Perform prediction when button is clicked
+    if st.button('Classify Image'):
+        # Perform prediction
+        predictions = predict_image(img)
+        
+        # Display predictions
+        st.subheader("Predictions:")
+        for i, (imagenet_id, label, score) in enumerate(predictions):
+            st.write(f"{i + 1}: {label} ({score:.2f})")
+
+
+upload_file = st.camera_input("Camera")
+if upload_file is not None:
+    # Display the uploaded image
+    img = Image.open(upload_file)
     st.image(img, caption='Uploaded Image', use_column_width=True)
 
     # Perform prediction when button is clicked
