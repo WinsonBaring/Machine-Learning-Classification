@@ -6,9 +6,11 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
 
 
-st.markdown("<h1 style='text-align: center;'>The Identity Everything</h1>", unsafe_allow_html=True)
-st.markdown("<br>", unsafe_allow_html=True)  # Add space below the title
+st.markdown("<h1 style='text-align: center;'>Jungle Guardians</h1>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True) 
 st.image('https://github.com/WinsonBaring/Machine-Learning-Classification/blob/main/src/bg.png?raw=true', use_column_width=True)
+st.markdown("<br>", unsafe_allow_html=True)  
+st.markdown("<p style='text-align: center;'>Easily identify big cats with our WildCat Classifier! Quickly spot Cheetahs, Hyenas, Tigers, and Jaguars with accuracy. Designed for nature enthusiasts and conservationists, it's your go-to tool for wildlife exploration. Experience the jungle like never before!</p>", unsafe_allow_html=True)
 
 # Load pre-trained ResNet50 model
 model = ResNet50(weights='imagenet')
@@ -46,11 +48,20 @@ if uploaded_file is not None:
         
         # Display predictions
         st.subheader("Predictions:")
+        
         for i, (imagenet_id, label, score) in enumerate(predictions):
-            st.write(f"{i + 1}: {label} ({score:.2f})")
+            score_percentage = score * 100
+            st.write(f"{i + 1}: {label} ({score_percentage:.2f}%)")
 
-
+st.markdown("<br>", unsafe_allow_html=True)  
+st.markdown("<br>", unsafe_allow_html=True)  
+st.markdown("<br>", unsafe_allow_html=True)  
+st.markdown("<br>", unsafe_allow_html=True)  
+st.markdown("<br>", unsafe_allow_html=True)  
+st.markdown("<br>", unsafe_allow_html=True)  
 upload_file = st.camera_input("Camera")
+
+
 if upload_file is not None:
     # Display the uploaded image
     img = Image.open(upload_file)
@@ -64,4 +75,8 @@ if upload_file is not None:
         # Display predictions
         st.subheader("Predictions:")
         for i, (imagenet_id, label, score) in enumerate(predictions):
-            st.write(f"{i + 1}: {label} ({score:.2f})")
+
+            score_percentage = score * 100
+            st.write(f"{i + 1}: {label} ({score_percentage:.2f}%)")
+
+
